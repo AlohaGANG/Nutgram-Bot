@@ -167,6 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
+        \SergiX44\Nutgram\NutgramServiceProvider::class,
 
         /*
          * Application Service Providers...
