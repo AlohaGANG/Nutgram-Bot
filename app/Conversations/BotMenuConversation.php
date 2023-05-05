@@ -23,6 +23,8 @@ class BotMenuConversation extends Conversation
             'reply_markup' => ReplyKeyboardMarkup::make()->addRow(
                 KeyboardButton::make(__('buttonsLocale.Location')),
                 KeyboardButton::make(__('buttonsLocale.Call')),
+            )->addRow(
+                KeyboardButton::make(__('buttonsLocale.Book'))
             )
         ]);
     }

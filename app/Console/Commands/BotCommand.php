@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Conversations\BookComputerConversation;
 use App\Handlers\Commands\StartCommand;
 use App\InlineMenus\ChooseLanguageMenu;
 use App\Middleware\ChooseLanguageMiddleware;
@@ -48,6 +49,7 @@ class BotCommand extends Command
         $bot->onText('Call|Позвонить|Qo\'ng\'iroq qilish', function (Nutgram $bot){
             $bot->sendContact('Team Pro','+998954101717');
         });
+        $bot->onText('Book a computer|Забронировать компьютер|Kompyuterni bron qilish', BookComputerConversation::class);
 
         $bot->registerMyCommands();
 
