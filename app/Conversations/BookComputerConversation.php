@@ -48,11 +48,30 @@ class BookComputerConversation extends Conversation
                 )
         ]);
         $this->time = $bot->message()->text;
+        $this->next('fourthStep');
+    }
+    public function fourthStep(Nutgram $bot){
+        $this->phoneNumber = $bot->message()->contact->phone_number;
+        $bot->sendMessage(__('messages.Name'). "{$this->name}" .
+            "\n" . __('messages.Time') . "{$this->time}" .
+            "\n" . __('messages.PhoneNumber') . "{$this->phoneNumber}" .
+            "\n" . __('messages.ParameterСheck'),[
+            'parse_mode' => 'html',
+            'reply_markup' => ReplyKeyboardMarkup::make()
+                ->addRow(
+                    KeyboardButton::make(__('buttonsLocale.Yes')),
+                    KeyboardButton::make(__('buttonsLocale.No'))
+                )
+        ]);
+        $bot->onText('No|Нет|Yo\'q', function (Nutgram $bot) {
+            $bot->sendMessage(__('messages.NoMessage'));
+            $this->start($bot);
+        });
         $this->next('recap');
     }
     public function recap(Nutgram $bot){
+        $bot->sendMessage(__('messages.YesMessage'));
         BotMenuConversation::begin($bot);
-        $this->phoneNumber = $bot->message()->contact->phone_number;
         $this->sendMessage();
         $this->end();
     }

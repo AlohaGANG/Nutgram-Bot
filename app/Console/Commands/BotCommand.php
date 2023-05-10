@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Conversations\BookComputerConversation;
+use App\Conversations\ComputerPriceConversation;
 use App\Handlers\Commands\StartCommand;
 use App\InlineMenus\ChooseLanguageMenu;
 use App\Middleware\ChooseLanguageMiddleware;
@@ -50,6 +51,8 @@ class BotCommand extends Command
             $bot->sendContact('Team Pro','+998954101717');
         });
         $bot->onText('Book a computer|Забронировать компьютер|Kompyuterni bron qilish', BookComputerConversation::class);
+
+        $bot->onText('Prices|Цены|Narxlar', ComputerPriceConversation::class);
 
         $bot->registerMyCommands();
 
