@@ -1,12 +1,13 @@
 <?php
 
 return [
-    'Location' => 'Manzil',
-    'Call' => 'Qo\'ng\'iroq qilish',
-    'Book' => 'Kompyuterni bron qilish',
+    'Location' => 'Qayerdamiz?',
+    'Call' => 'Biz bilan bog\'lanish',
+    'Book' => 'Kompyuter buyurtma',
     'ShareContact' => 'Kontaktni ulashish',
     'Yes' => 'Ha',
     'No' => 'Yo\'q',
     'Prices' => 'Narxlar',
-    'FreeComputers' => 'Qaysi kompyuterlar bepul ekanligini bilib oling',
+    'FreeComputers' => 'Bo\'sh kompyuterlar',
+    'Registration' => 'Klubga ro\'yxatdan o\'tish',
 ];

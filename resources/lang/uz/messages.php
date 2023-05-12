@@ -8,5 +8,13 @@ return [
     'PhoneNumber' => 'Telefon raqami: ',
     'YesMessage' => 'Ajoyib. Maʼlumotlaringiz muvaffaqiyatli yuborildi. Administrator qo\'ng\'irog\'ini kuting.',
     'NoMessage' => 'Keling, takrorlaymiz.',
-    'Sum' => 'So\'m'
+    'Sum' => 'So\'m',
+    'FreeCom' => ':pcsInUsing ta kompyuter egallangan, :freePc ta :allPcs dan bo\'sh joy mavjud.',
+    'FreePs' => ':ps5InUsing ta PlayStation egallangan, :freePS ta :allPs5 dan bo\'sh joy mavjud.',
+    'Ready' => 'Tayyor',
+    'AccountBeReg' => 'Bu akkaunt mavjud',
+    'AccountInfo1' => 'Sizning login: ',
+    'AccountInfo2' => 'Sizning parolingiz: ',
+    'AccountInfo3' => 'Iltimos, bu maʼlumotlarni yoʻqotmaslik uchun saqlang.',
+    'AccountInfo4' => 'Sizda allaqachon hisob bor shekilli...',
 ];

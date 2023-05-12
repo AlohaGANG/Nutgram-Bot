@@ -9,4 +9,12 @@ return [
     'YesMessage' => 'Great. Your data was successfully sent. Wait for the administrator\'s call.',
     'NoMessage' => 'Let\'s repeat.',
     'Sum' => 'Sum',
+    'FreeCom' => ':pcsInUsing computers are occupied, :freePc out of :allPcs are available.',
+    'FreePs' => ':ps5InUsing PlayStation are occupied, :freePS out of :allPs5 are available.',
+    'Ready' => 'Ready',
+    'AccountBeReg' => 'This account already exists',
+    'AccountInfo1' => 'Your login: ',
+    'AccountInfo2' => 'Your password: ',
+    'AccountInfo3' => 'Please save this data so you don\'t lose it.',
+    'AccountInfo4' => 'Looks like you already have an account...',
 ];
