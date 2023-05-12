@@ -1,12 +1,13 @@
 <?php
 
 return [
-    'Location' => 'Location',
-    'Call' => 'Call',
-    'Book' => 'Book a computer',
+    'Location' => 'Where are we?',
+    'Call' => 'Contact us',
+    'Book' => 'Computer booking',
     'ShareContact' => 'Share Contact',
     'Yes' => 'Yes',
     'No' => 'No',
-    'Prices' => 'Prices',
-    'FreeComputers' => 'Find out which computers are free',
+    'Prices' => 'Pricing',
+    'FreeComputers' => 'Available computers',
+    'Registration' => 'Club registration',
 ];

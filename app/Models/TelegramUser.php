@@ -10,5 +10,5 @@ class TelegramUser extends Model
     use HasFactory;
 
     protected $table = 'telegram_users';
-    protected $fillable = ['chat_id', 'username', 'first_name', 'last_name'];
+    protected $fillable = ['chat_id', 'username', 'first_name', 'last_name', 'is_registered'];
 }

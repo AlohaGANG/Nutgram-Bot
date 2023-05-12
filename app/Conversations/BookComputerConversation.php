@@ -42,7 +42,7 @@ class BookComputerConversation extends Conversation
     public function thirdStep(Nutgram $bot){
         $bot->sendMessage(__('Booking.PhoneNumber'), [
             'parse_mode' => 'html',
-            'reply_markup' => ReplyKeyboardMarkup::make()
+            'reply_markup' => ReplyKeyboardMarkup::make(resize_keyboard: true,)
                 ->addRow(
                     KeyboardButton::make(__('buttonsLocale.ShareContact'), request_contact: true)
                 )
@@ -70,7 +70,7 @@ class BookComputerConversation extends Conversation
         $this->next('recap');
     }
     public function recap(Nutgram $bot){
-        $bot->sendMessage(__('messages.YesMessage'));
+        $bot->sendMessage(__('messages.YesMessage') . '');
         BotMenuConversation::begin($bot);
         $this->sendMessage();
         $this->end();

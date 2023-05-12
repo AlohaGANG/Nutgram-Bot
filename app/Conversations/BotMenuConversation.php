@@ -24,11 +24,11 @@ class BotMenuConversation extends Conversation
                 KeyboardButton::make(__('buttonsLocale.Location')),
                 KeyboardButton::make(__('buttonsLocale.Call')),
             )->addRow(
-                KeyboardButton::make(__('buttonsLocale.Book'))
-            )->addRow(
+                KeyboardButton::make(__('buttonsLocale.Book')),
                 KeyboardButton::make(__('buttonsLocale.Prices')),
             )->addRow(
                 KeyboardButton::make(__('buttonsLocale.FreeComputers')),
+                KeyboardButton::make(__('buttonsLocale.Registration')),
             )
         ]);
     }

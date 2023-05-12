@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use App\Conversations\BookComputerConversation;
 use App\Conversations\ComputerPriceConversation;
+use App\Conversations\FreeComputerConversation;
+use App\Conversations\RegisterConversation;
 use App\Handlers\Commands\StartCommand;
 use App\InlineMenus\ChooseLanguageMenu;
 use App\Middleware\ChooseLanguageMiddleware;
@@ -44,15 +46,21 @@ class BotCommand extends Command
         $bot->registerCommand(StartCommand::class)
             ->middleware(ChooseLanguageMiddleware::class);
 
-        $bot->onText('Location|Локация|Manzil', function (Nutgram $bot){
+        $bot->onText('Where are we?|Где мы находимся?|Qayerdamiz?', function (Nutgram $bot){
             $bot->sendLocation(41.270121,69.191031);
         });
-        $bot->onText('Call|Позвонить|Qo\'ng\'iroq qilish', function (Nutgram $bot){
+        $bot->onText('Contact us|Связаться с нами|Biz bilan bog\'lanish', function (Nutgram $bot){
             $bot->sendContact('Team Pro','+998954101717');
         });
-        $bot->onText('Book a computer|Забронировать компьютер|Kompyuterni bron qilish', BookComputerConversation::class);
+        $bot->onText('Computer booking|Бронь компьютера|Kompyuter buyurtma', BookComputerConversation::class);
 
-        $bot->onText('Prices|Цены|Narxlar', ComputerPriceConversation::class);
+        $bot->onText('Pricing|Тарифы|Narxlar', ComputerPriceConversation::class);
+
+        $bot->onText('Available computers|Свободные компьютеры|Bo\'sh kompyuterlar',
+            FreeComputerConversation::class);
+
+        $bot->onText('Club registration|Регистрация в клубе|Klubga ro\'yxatdan o\'tish',
+            RegisterConversation::class);
 
         $bot->registerMyCommands();
 
