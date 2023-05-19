@@ -10,7 +10,7 @@ services:
       - "80:80"
     depends_on:
       -   app
-    container_name: nutgrumbot_nginx
+    container_name: tgbot_nginx
 
   app:
     build:
@@ -31,9 +31,9 @@ services:
           POSTGRES_PASSWORD: root
       ports:
           - "5432:5432"
-      container_name: nutgrumbot_db
+      container_name: tgbot_app
   adminer:
       image: adminer
       restart: always
       ports:
-          - 8080:8080
+          - 8088:8088
